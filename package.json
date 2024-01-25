@@ -1,0 +1,51 @@
+{
+  "name": "valar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "yarn watch & yarn serve",
+    "serve": "npx live-server ./build",
+    "build": "webpack --env build",
+    "watch": "webpack --env dev --watch",
+    "analyze": "webpack --env analyze --profile --json > stats.json"
+  },
+  "dependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.18.9",
+    "animejs": "^3.2.1",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "in-view": "^0.6.1",
+    "live-server": "git+https://github.com/tapio/live-server.git#ad22544",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.1.0",
+    "postcss-preset-env": "^8.2.0",
+    "tailwindcss": "^3.3.0",
+    "template-ejs-loader": "^0.9.4",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.8.0"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
