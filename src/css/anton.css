@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Anton", sans-serif;
+  src: url('/media/fonts/Anton-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}

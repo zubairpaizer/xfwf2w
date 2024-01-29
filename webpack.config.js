@@ -55,7 +55,7 @@ module.exports = ({ build, analyze, dev }, args) => {
         {
           test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf)$/i,
           type: 'asset/resource',
-          generator: { filename: './media/[hash][ext]' },
+          generator: { filename: './media/[name][ext]' },
         },
       ],
     },

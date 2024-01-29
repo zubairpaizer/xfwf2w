@@ -1,11 +1,491 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('satoshi.css');
+@import url('anton.css');
 
-@layer base {
-  html {
-    font-family: Satoshi-Variable, system-ui, sans-serif;
-    @apply text-white bg-black;
+body {
+  background-color: #feeab9;
+  cursor: url(/media/bitcorn.svg) auto
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  background-color: #feeab9;
+  min-height: 560px;
+  padding-top: 2rem;
+}
+
+.header .middle .middle-logo {
+  position: relative;
+  font-size: 10rem;
+}
+
+.header .middle .desc {
+  position: relative;
+  font-size: 1.2rem;
+  top: 20px;
+}
+
+.header .middle .bottom-links {
+  position: relative;
+  font-size: 1.2rem;
+  top: -40px;
+}
+
+.header .middle .middle-logo img {
+  position: absolute;
+  top: 27%;
+  width: 30%;
+  right: -77px;
+}
+
+.header .middle .middle-logo h2 {
+  font-size: 150pt;
+}
+
+.tree-seperator  {
+  position: relative;
+  height: 170px;
+  width: 100%;
+}
+
+.tree-seperator .trees {
+  height: 275px;
+  position: absolute;
+  width: 120%;
+  display: flex;
+  align-items: center;
+  left: -90px;
+  border-top-right-radius: 60%;
+  border-top-left-radius: 65%;
+  background-image: url(/media/images/yello-trees.svg);
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  z-index: 1;
+  margin-top: -104px;
+}
+
+.tree-seperator .container {
+  height: 245px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  min-width: 115%;
+  border-top-right-radius: 60%;
+  border-top-left-radius: 65%;
+  top: -60px;
+  left: -80px;
+}
+
+.logo h2 {
+  font-size: 1.5rem;
+}
+
+.social-info {
+  padding: 5rem;
+}
+
+.social-info .heading {
+  font-size: 128px;
+  font-weight: 400;
+  line-height: 125px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.note-cards  {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.note-cards .note-card {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  color: #66490A;
+  background-color: #ffe2a1;
+  min-height: 200px;
+  align-items: flex-end;
+}
+
+.note-cards .note-card img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.social-cards {
+  background-color: #ffe2a1;
+  padding: 1.5rem;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-cards .social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3d799;
+  padding: 10px;
+  gap: 10px;
+  min-width: 70%;
+  border-radius: 24px;
+}
+
+
+.social-cards .social-icons img {
+  max-width: 58px;
+}
+
+.pool-info {
+  padding: 5em;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.pool-info .heading {
+  font-size: 128px;
+  font-weight: 400;
+  line-height: 125px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.pool-cards  {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pool-cards .pool-card {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  color: #66490A;
+  background-color: #ffe2a1;
+  min-height: 200px;
+  min-width: 200px;
+  align-items: flex-start;
+}
+
+.pool-cards .pool-card .value {
+  position: absolute;
+  bottom: 5px;
+  font-size: 34pt;
+  left: 10px;
+}
+
+.pool-cards .pool-card .btn-ask {
+  display: flex;
+  padding: 6px 6px 6px 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  gap: 8px;
+  width: 100%;
+  font-size: 14px;
+}
+
+
+footer .bottom-footer {
+  color: #FFFFFF7A;
+}
+
+
+/* marquee */
+/* Marquee styles */
+
+.bitcorn-marquee {
+  top: -88px;
+  position: relative;
+}
+
+.bitcorn-marquee .marquee {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+}
+
+
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee-first {
+  z-index: 2;
+  padding: 2px;
+  transform: rotate(5deg);
+}
+
+.marquee-2nd {
+  padding: 2px;
+  transform: rotate(-5deg);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 10s linear infinite;
+}
+
+/* Reverse animation */
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content;
+}
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Other page demo styles */
+.marquee__content .item {
+  flex: 0 0 auto;
+  color: white;
+  display: flex;
+  font-size: 24pt;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+}
+
+.marquee__content .item img {
+  max-width: 135px;
+}
+
+.marquee__content .item span {
+  font-size: 30pt;
+}
+
+.welcome {
+  font-size: 34pt;
+}
+
+
+/* hide .number-el border on mobile for third item */
+@media (max-width: 1024px) {
+  .cloud-mobile {
+    display: inline-block !important;
+  }
+
+  .cloud-desktop {
+    display: none;
+  }
+
+  .footer {
+    padding: 2rem !important;
+  }
+
+  .pool-info {
+    padding: 1em 1em 2em 1em;
+  }
+
+  .social-info {
+    padding: 1em 1em 2em 1em;
+  }
+
+  .marquee-2nd {
+    padding: 1px;
+    transform: rotate(-12deg);
+  }
+
+  .marquee-first {
+    z-index: 2;
+    padding: 1ex;
+    transform: rotate(12deg);
+  }
+
+  .welcome {
+    font-size: 30pt;
+  }
+
+  .marquee__content .item span {
+    font-size: 24pt;
+  }
+  
+  .header .middle .middle-logo img {
+    display: none;
+  }
+
+  .social-cards {
+    flex-direction: column;
+  }
+
+  .social-info .heading {
+    font-size: 40pt;
+    font-weight: 400;
+    line-height: 59px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .pool-info .heading {
+    font-size: 40pt;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .pool-cards {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .note-cards {
+    flex-direction: column;
+  }
+
+  .header {
+    padding-top: 7em;
+    height: 600px;
+  }
+  
+  .tree-seperator .container {
+    min-width: 142%;
+    height: 225px;
+    top: -48px;
+    left: -74px;
+    }
+
+  .tree-seperator .trees {
+    height: 278px;
+    width: 132%;
+  }
+
+  .top-navigation {
+    display: none;
+  }
+  .header .middle .middle-logo h2 {
+    font-size: 74pt;
+  }
+  .header .middle .desc {
+    position: relative;
+    font-size: 1rem;
+    top: 25px;
+    text-align: center;
+    max-width: 280px;
+  }
+  .header .bottom-links {
+    flex-direction: column;
+    top: 0px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cloud-d3 {
+    top: 47% !important;
+    left: 9% !important;
+  }
+  .cloud-d2 {
+    top: 58% !important;
+    right: 8% !important;
+  }
+
+  .cloud-d1 {
+    right: 2% !important;
+    top: 24% !important;
+  }
+  .cloud-0 {
+    left: 4% !important;
+    top: 29% !important;
+  }
+}
+
+.footer {
+  padding: 5rem;
+}
+
+
+.cloud-mobile {
+  display: none;
+}
+
+.cloud-d3 {
+  top: 47%;
+  left: 19%;
+}
+
+.cloud-d2 {
+  top: 58%;
+  right: 19%;
+}
+
+
+.cloud-d1 {
+  right: 11%;
+  top: 24%;
+}
+
+.cloud-0 {
+  left: 12%;
+  top: 29%;
+}
+
+.cloud-2 {
+  right: 15%;
+  top: 9%;
+}
+
+.cloud-1 {
+  right: 10%;
+  top: 52%;
+}
+
+.cloud-3 {
+  top: 45%;
+  left: -1%;
 }
