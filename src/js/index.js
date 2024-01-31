@@ -13,70 +13,36 @@ addEventListener("DOMContentLoaded", function (event) {
         menuModal.classList.add('active');
     })
 
+    var paragraph = [...document.querySelectorAll('.hightlight-text')];
+    var spans = [];
 
-    // var draggables = document.querySelectorAll('.drag');
-    // var mousedown = false;
-    // var current;
-    // var draggables;
-    // var currentx = 0;
-    // var currenty = 0;
-    // var offsetx = 0;
-    // var offsety = 0;
-    // var newx = 0;
-    // var newy = 0;
-    // var marginTop = 0;
-    // var marginLeft = 0;
+    paragraph.forEach(function (p) {
+        var htmlString = '';
+        var pArray = p.textContent.split('');
+        for (var i = 0; i < pArray.length; i++) {
+            htmlString += `<span class='hightlight-span'>${pArray[i]}</span>`
+        }
+        p.innerHTML = htmlString;
+    })
 
-    // for (var i = 0; i < draggables.length; i++) {
-    //     var item = draggables[i];
+    spans = [...this.document.querySelectorAll('.hightlight-span')];
 
-    //     item.addEventListener('mousemove', function (e) {
-    //         if (mousedown) {
-    //             if (offsetx == 0 && offsety == 0) {
-    //                 offsetx = (e.clientX - currentx);
-    //                 offsety = (e.clientY - currenty);
-    //             }
+    function revealSpan () {
+        for (var i = 0; i < spans.length; i++) {
+            if (spans[i].parentElement.getBoundingClientRect().top < window.innerHeight / 2) {
+                let { left, top } = spans[i].getBoundingClientRect();
+                top = top - (window.innerHeight * .2);
+                let opacityValue = 1 - ((top * .01) + (left * 0.001)) < 0.1 ? 0.1 : 1 - ((top * .01) + (left * 0.001)).toFixed(3);
+                if (opacityValue < 1) {
+                    opacityValue = 0.4;
+                }
+                opacityValue = opacityValue > 1 ? 1 : opacityValue.toFixed(3);
+                spans[i].style.opacity = opacityValue;
+            }
+        }
+    }
 
-    //             newx = (e.clientX - offsetx);
-    //             newy = (e.clientY - offsety);
-
-    //             current.style.left = newx + "px";
-    //             current.style.top = newy + "px";
-    //             current.style.bottom = 'auto';
-    //             current.style.right = 'auto';
-    //         }
-    //     });
-
-
-    //     item.onmouseup = (function() {
-    //         return function() {
-    //             mousedown = false;
-    //             currentx = 0;
-    //             currenty = 0;
-    //             offsetx = 0;
-    //             offsety = 0;
-    //             marginTop = 0;
-    //             marginLeft = 0;
-    //         }
-    //     })();
-
-    //     item.onmousedown = (function() {
-    //         var index = i;
-    //         return function() {
-    //             mousedown = true;
-    //             current = draggables[index];
-
-    //             marginTop = parseInt(window.getComputedStyle(current, null).getPropertyValue('margin-top'));
-    //             marginLeft = parseInt(window.getComputedStyle(current, null).getPropertyValue('margin-left'));
-
-    //             let rect = current.getBoundingClientRect();
-    //             current.style.position = "fixed";
-    //             current.style.cursor = "pointer";
-    //             current.style.zIndex = "1000";
-
-    //             currentx = rect.left - marginLeft;
-    //             currenty = rect.top - marginTop;
-    //         }
-    //     })();
-    // }
+    this.window.addEventListener('scroll', function () {
+        revealSpan();
+    })
 });

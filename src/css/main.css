@@ -2,10 +2,22 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import url('anton.css');
+html {
+  --brown: #7A2714;
+  --ybrown: #fcc837;
+  --lyellow: #feeab9;
+  --darkorange: #F7A326;
+  --orange: #f7a325;
+  --lbrown: #c88827;
+  --ybrown: #fcc837;
+  --lyellow: #feeab9;
+  --yellow2: #FFE2A1;
+  --vgray: #EDDAAD
+}
 
 body {
   background-color: #feeab9;
-  cursor: url(/media/bitcorn.svg), auto;
+  cursor: url(/public/icons/cursor-default.svg), auto;
 }
 
 .anton-regular {
@@ -16,7 +28,7 @@ body {
 
 .header {
   background-color: #feeab9;
-  min-height: 560px;
+  min-height: 570px;
   padding-top: 2rem;
 }
 
@@ -30,6 +42,8 @@ body {
   font-size: 1.2rem;
   top: 20px;
 }
+
+
 
 .header .middle .bottom-links {
   position: relative;
@@ -46,6 +60,39 @@ body {
 
 .header .middle .middle-logo h2 {
   font-size: 150pt;
+}
+
+.menu-coingecko .icon {
+  display: none;
+}
+
+.menu-coingecko {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: var(--brown);
+}
+
+.menu-coingecko:hover {
+  position: static;
+  box-shadow: 0px 0px 1px rgba(0,0,0,0.3);
+  color: var(--brown);
+  background-color: #fff;
+}
+
+.menu-coingecko:hover .icon {
+  position: static;
+  display: block !important;
+}
+
+.menu-coingecko:hover .icon-2 {
+  display: none !important;
+}
+
+.hightlight-span {
+  opacity: 0.4;
+  color: var(--brown);
 }
 
 .tree-seperator  {
@@ -142,9 +189,23 @@ body {
   border-radius: 24px;
 }
 
+.note-card:hover {
+  color: var(--yellow2);
+  background-color: var(--brown);
+}
+
+.note-card:hover .value {
+  color: var(--yellow2);
+}
+
 
 .social-cards .social-icons img {
   max-width: 58px;
+}
+
+.social-cards .social-icons img:hover {
+  max-width: 70px;
+  position: static;
 }
 
 .pool-info {
@@ -179,14 +240,31 @@ body {
   align-items: flex-start;
 }
 
+.pool-cards .pool-card:hover {
+  color: var(--yellow2);
+  background-color: var(--brown);
+}
+
+.pool-cards .pool-card:hover .value {
+  color: var(--yellow2);
+}
+
 .pool-cards .pool-card .value {
   position: absolute;
+  color: var(--brown);
   bottom: 5px;
   font-size: 34pt;
   left: 10px;
 }
 
+.pool-cards .pool-card:hover .btn-ask {
+  color: var(--brown);
+  background-color: var(--yellow2);
+}
+
 .pool-cards .pool-card .btn-ask {
+  color: var(--yellow2);
+  background-color: var(--brown);
   display: flex;
   padding: 6px 6px 6px 16px;
   align-items: center;
@@ -317,6 +395,10 @@ footer .bottom-footer {
 
 /* hide .number-el border on mobile for third item */
 @media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+
   #menu-btn {
     display: block !important;
   }
@@ -413,6 +495,7 @@ footer .bottom-footer {
     height: 278px;
     width: 132%;
   }
+
 
   .top-navigation .ref, .top-navigation .links {
     display: none;
@@ -542,8 +625,8 @@ footer .bottom-footer {
   line-height: 60px;
 }
 
-.hand {
-  cursor: pointer;
+.hand, a, button {
+  cursor: url(/public/icons/cursor-default.svg), auto;
 }
 
 .cloud-v {
