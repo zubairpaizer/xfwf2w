@@ -5,7 +5,7 @@
 
 body {
   background-color: #feeab9;
-  cursor: url(/media/bitcorn.svg) auto
+  cursor: url(/media/bitcorn.svg), auto;
 }
 
 .anton-regular {
@@ -317,8 +317,16 @@ footer .bottom-footer {
 
 /* hide .number-el border on mobile for third item */
 @media (max-width: 1024px) {
+  #menu-btn {
+    display: block !important;
+  }
+  
   .cloud-mobile {
     display: inline-block !important;
+  }
+
+  .top-navigation {
+    margin: 0 1em;
   }
 
   .cloud-desktop {
@@ -390,7 +398,7 @@ footer .bottom-footer {
   }
 
   .header {
-    padding-top: 7em;
+    padding-top: 2em;
     height: 600px;
   }
   
@@ -406,7 +414,7 @@ footer .bottom-footer {
     width: 132%;
   }
 
-  .top-navigation {
+  .top-navigation .ref, .top-navigation .links {
     display: none;
   }
   .header .middle .middle-logo h2 {
@@ -477,15 +485,92 @@ footer .bottom-footer {
 
 .cloud-2 {
   right: 15%;
-  top: 9%;
+  top: 12%;
 }
 
 .cloud-1 {
   right: 10%;
-  top: 52%;
+  top: 68%;
 }
 
 .cloud-3 {
-  top: 45%;
+  top: 62%;
   left: -1%;
+}
+
+#menu-modal.active {
+  opacity: 1;
+  display: block;
+}
+
+#menu-modal {
+  display: none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  border-radius: 50px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5; 
+}
+
+#menu-modal .links {
+  margin-top: 5%;
+  padding: 1ex;
+}
+
+#menu-modal .links .ref {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+}
+
+#menu-modal .links .ref button {
+  width: 95%
+}
+
+#menu-modal .links ul {
+  flex-direction: column;
+  font-size: 44pt;
+}
+
+#menu-modal .links ul li {
+  line-height: 60px;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.cloud-v {
+	animation: movev 4s ease infinite;
+  position: absolute;
+}
+
+.cloud-h {
+	animation: cloudh 4s ease infinite;
+  position: absolute;
+}
+
+#menu-btn {
+  display: none;
+}
+
+
+
+@keyframes movev {
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes cloudh {
+  0% {
+    transform: translatex(0);
+  }
+  50% {
+    transform: translatex(-40px);
+  }
 }

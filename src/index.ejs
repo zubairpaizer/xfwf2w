@@ -8,24 +8,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    
+
     <title>Bitcorn</title>
     <meta name="description" content="Bitcorn description" />
 </head>
 
 <body class="overflow-x-hidden">
+    <div id="menu-modal" class="dnone bg-lyellow">
+        <div class="flex justify-between p-3 items-center">
+            <div class="logo gap-3 flex">
+                <img src="/public/images/bitcorn.svg" />
+                <h2 class="text-brown anton-regular">Bitcorn</h2>
+            </div>
+            <div class="hand" id="menu-close-btn">
+                <img src="/public/icons/close.svg" />
+            </div>
+        </div>
+
+        <div class="links">
+            <ul class="flex gap-4">
+                <li class="text-brown anton-regular"><a href="#">Home</a></li>
+                <li class="text-brown anton-regular"><a href="#">About</a></li>
+                <li class="text-brown anton-regular"><a href="#">Tokenomics</a></li>
+                <li class="text-brown anton-regular"><a href="#">Twitter</a></li>
+                <li class="text-brown anton-regular"><a href="#">Discord</a></li>
+            </ul>
+
+            <div class="ref">
+                <button class="bg-brown text-white px-5 py-2.5 rounded-full">Buy on coin gecko</button>
+            </div>
+        </div>
+    </div>
     <div class="header">
 
-        <img class="absolute cloud-0 cloud-desktop" src="/media/icons/cloud-desktop-left.svg" alt="" />
-        <img class="absolute cloud-d1 cloud-desktop" src="/media/icons/cloud-desktop-left.svg" alt="" />
-        <img class="absolute cloud-d2 cloud-desktop" src="/media/icons/cloud-desktop-2.svg" alt="" />
-        <img class="absolute cloud-d3 cloud-desktop" src="/media/icons/cloud-desktop-2.svg" alt="" />
+        <img class="absolute cloud-h cloud-0 cloud-desktop drag" src="/public/icons/cloud-desktop-left.svg" alt="" />
+        <img class="absolute cloud-h cloud-d1 cloud-desktop" src="/public/icons/cloud-desktop-left.svg" alt="" />
+        <img class="absolute cloud-v cloud-d2 cloud-desktop" src="/public/icons/cloud-desktop-2.svg" alt="" />
+        <img class="absolute cloud-v cloud-d3 cloud-desktop" src="/public/icons/cloud-desktop-2.svg" alt="" />
 
-        <img class="absolute cloud-1 cloud-mobile" src="/media/icons/cloud-1.svg" alt="" />
-        <img class="absolute cloud-2 cloud-mobile" src="/media/icons/cloud-2.svg" alt="" />
-        <img class="absolute cloud-3 cloud-mobile" src="/media/icons/cloud-3.svg" alt="" />
+        <img class="absolute cloud-h cloud-1 cloud-mobile" src="/public/icons/cloud-1.svg" alt="" />
+        <img class="absolute cloud-h cloud-2 cloud-mobile" src="/public/icons/cloud-2.svg" alt="" />
+        <img class="absolute cloud-v cloud-3 cloud-mobile" src="/public/icons/cloud-3.svg" alt="" />
 
-        <nav class="top-navigation flex gap-3 justify-between items-center mx-auto max-w-[800px] static bg-white p-3 rounded-full">
+        <nav class="top-navigation flex gap-3 justify-between items-center mx-auto max-w-[800px] static bg-white p-2 md:p-3 rounded-full">
             <div class="logo gap-3 flex">
                 <img src="/public/images/bitcorn.svg" />
                 <h2 class="text-brown anton-regular">Bitcorn</h2>
@@ -39,6 +64,10 @@
                     <li class="text-brown"><a href="#">Discord</a></li>
                 </ul>
             </div>
+            <div class="menu hand" id="menu-btn">
+                <img src="/public/icons/menu.svg" />
+            </div>
+
             <div class="ref">
                 <button class="bg-brown text-white px-5 py-2.5 rounded-full">Buy on coin gecko</button>
             </div>
@@ -57,9 +86,9 @@
                 </button>
                 <div class="flex gap-6">
                     <span class="text-gray">|</span>
-                    <a href="#"><img src="/media/icons/discord-header.svg" /></a>
-                    <a href="#"><img src="/media/icons/twitter-header.svg" /></a>
-                    <a href="#"><img src="/media/icons/telegram-header.svg" /></a>
+                    <a href="#"><img src="/public/icons/discord-header.svg" /></a>
+                    <a href="#"><img src="/public/icons/twitter-header.svg" /></a>
+                    <a href="#"><img src="/public/icons/telegram-header.svg" /></a>
                 </div>
             </div>
         </div>
@@ -70,8 +99,10 @@
     </section>
     <section class="bg-ybrown flex p-10 py-20 pb-[25ex] items-center">
         <p class="anton-regular max-w-[615px] mx-auto center welcome">
-            <span class="text-brown">Welcome Starklings!</span> 
-            <span class="text-lbrown">We are the meme coin of the Starknet revolution.STARKINU will also be the native coin on our on-chain casino! STARKINU is the cryptographic testament of defiance, a meme-powered subversion</span>
+            <span class="text-brown">Welcome Starklings!</span>
+            <span class="text-lbrown">We are the meme coin of the Starknet revolution.STARKINU will also be the native
+                coin on our on-chain casino! STARKINU is the cryptographic testament of defiance, a meme-powered
+                subversion</span>
         </p>
     </section>
 
@@ -80,46 +111,46 @@
         <div class="marquee marquee-first marquee--reverse enable-animation bg-lyellow">
             <div class="marquee__content">
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
             </div>
             <div class="marquee__content" aria-hidden="true">
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
                 <div class="item">
-                    <span class="anton-regular text-brown">BITCORN</span> 
-                    <img src="/media/icons/moving-corn.svg" />
+                    <span class="anton-regular text-brown">BITCORN</span>
+                    <img src="/public/icons/moving-corn.svg" />
                 </div>
             </div>
         </div>
@@ -128,51 +159,51 @@
         <div class="marquee enable-animation marquee-2nd bg-brown">
             <div class="marquee__content">
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
             </div>
             <div class="marquee__content" aria-hidden="true">
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
                 <div class="item">
-                    <p class="anton-regular text-lyellow">BITCORN</p> 
-                    <img src="/media/icons/moving-corn-2.svg" />
+                    <p class="anton-regular text-lyellow">BITCORN</p>
+                    <img src="/public/icons/moving-corn-2.svg" />
                 </div>
             </div>
         </div>
     </div>
- 
+
 
     <section class="social-info bg-lyellow">
         <div class="container max-w-[615px] mx-auto">
@@ -180,28 +211,29 @@
             <h2 class="anton-regular heading text-brown mt-5">How to Buy Bitcorn?</h2>
             <div class="note-cards mt-10">
                 <div class="note-card anton-regular">
-                    <img src="/media/icons/top-arrow.svg" />
+                    <img src="/public/icons/top-arrow.svg" />
                     Create a wallet on Leather.io and buy send stacks using any CEX.
                 </div>
                 <div class="note-card anton-regular">
-                    <img src="/media/icons/top-arrow.svg" />
+                    <img src="/public/icons/top-arrow.svg" />
                     Use this official link from our website/socials to start swapping.
                 </div>
                 <div class="note-card anton-regular">
-                    <img src="/media/icons/top-arrow.svg" />
+                    <img src="/public/icons/top-arrow.svg" />
                     Swap $STX for $BITCORN using the DEX’s on-board routing
                 </div>
             </div>
             <div class="social-cards mt-10">
                 <p>
-                    Join the Farm and stay tuned for all the updates. This is another line of text to be inserted here,Would be great if this text will be atleast 3 lines long ->
+                    Join the Farm and stay tuned for all the updates. This is another line of text to be inserted
+                    here,Would be great if this text will be atleast 3 lines long ->
                 </p>
                 <div class="social-icons">
-                    <img src="/media/icons/discord.svg" />
-                    <img src="/media/icons/stake.svg" />
-                    <img src="/media/icons/coingecko.svg" />
-                    <img src="/media/icons/telegram.svg" />
-                    <img src="/media/icons/x.svg" />
+                    <img src="/public/icons/discord.svg" />
+                    <img src="/public/icons/stake.svg" />
+                    <img src="/public/icons/coingecko.svg" />
+                    <img src="/public/icons/telegram.svg" />
+                    <img src="/public/icons/x.svg" />
                 </div>
             </div>
         </div>
@@ -216,7 +248,7 @@
                 <p class="label">Symbol</p>
                 <p class="anton-regular value text-brown">$BITCORN</p>
             </div>
-            
+
             <div class="pool-card">
                 <p class="label">Liquidity Pool</p>
                 <p class="anton-regular value text-brown">75%</p>
@@ -242,7 +274,7 @@
             <div class="pool-card input">
                 <div class="btn-ask bg-brown">
                     <span class="text-lyellow">More Questions?</span>
-                    <img src="/media/icons/arrow-right-top.svg" />
+                    <img src="/public/icons/arrow-right-top.svg" />
                 </div>
                 <p class="anton-regular value text-brown">10 Billion</p>
             </div>
@@ -263,9 +295,9 @@
                     <li><a href="#">How to buy</a></li>
                 </ul>
                 <div class="flex justify-between mt-5 md:mt-0 md:items-center gap-5">
-                    <a href="#"><img class="w-[20px]" src="/media/icons/f_twitter.svg" /></a>
-                    <a href="#"><img class="w-[20px]" src="/media/icons/f_telegram.svg" /></a>
-                    <a href="#"><img class="w-[20px]" src="/media/icons/f_discord.svg" /></a>
+                    <a href="#"><img class="w-[20px]" src="/public/icons/f_twitter.svg" /></a>
+                    <a href="#"><img class="w-[20px]" src="/public/icons/f_telegram.svg" /></a>
+                    <a href="#"><img class="w-[20px]" src="/public/icons/f_discord.svg" /></a>
                 </div>
             </div>
             <div class="bottom-footer mt-7 flex-col md:flex-row text-sm flex justify-between md:items-center">
