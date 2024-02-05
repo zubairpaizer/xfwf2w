@@ -205,7 +205,7 @@ body {
 
 .social-cards .social-icons img:hover {
   max-width: 70px;
-  position: static;
+  position: relative;
 }
 
 .pool-info {
