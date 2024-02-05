@@ -28,7 +28,7 @@ body {
 
 .header {
   background-color: #feeab9;
-  min-height: calc(100vh -  18vh);
+  min-height: calc(100vh -  20vh);
   padding-top: 2rem;
 }
 
