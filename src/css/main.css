@@ -157,6 +157,7 @@ body {
   padding: 10px;
   color: #66490A;
   background-color: #ffe2a1;
+  border-radius: 5px;
   min-height: 200px;
   align-items: flex-end;
 }
@@ -171,6 +172,7 @@ body {
   background-color: #ffe2a1;
   padding: 1.5rem;
   font-size: 20px;
+  border-radius: 24px;
   letter-spacing: -0.03em;
   text-align: left;
   display: flex;
@@ -208,10 +210,10 @@ body {
 
 .social-cards .social-icons img {
   max-width: 58px;
+  transition: position 0.2s ease-in;
 }
 
 .social-cards .social-icons img:hover {
-  max-width: 70px;
   max-width: 70px;
   position: absolute;
   left: -8px;
@@ -242,12 +244,14 @@ body {
 .pool-cards .pool-card {
   position: relative;
   display: flex;
+  border-radius: 5px;
   padding: 10px;
   color: #66490A;
   background-color: #ffe2a1;
   min-height: 200px;
   min-width: 200px;
   align-items: flex-start;
+  transition: all 0.2s ease-in;
 }
 
 .pool-cards .pool-card:hover {
