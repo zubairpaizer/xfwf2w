@@ -28,7 +28,7 @@ body {
 
 .header {
   background-color: #feeab9;
-  min-height: 570px;
+  min-height: calc(100vh -  18vh);
   padding-top: 2rem;
 }
 
@@ -198,6 +198,13 @@ body {
   color: var(--yellow2);
 }
 
+.social-cards .social-icons {
+  position: relative;
+}
+
+.social-icons .sc-icon {
+  width: 58px;
+}
 
 .social-cards .social-icons img {
   max-width: 58px;
@@ -205,7 +212,10 @@ body {
 
 .social-cards .social-icons img:hover {
   max-width: 70px;
-  position: relative;
+  max-width: 70px;
+  position: absolute;
+  left: -8px;
+  top: -15px;
 }
 
 .pool-info {
@@ -342,7 +352,7 @@ footer .bottom-footer {
 
 /* Enable animation */
 .enable-animation .marquee__content {
-  animation: scroll 10s linear infinite;
+  animation: scroll 18s linear infinite;
 }
 
 /* Reverse animation */
@@ -657,3 +667,4 @@ footer .bottom-footer {
     transform: translatex(-40px);
   }
 }
+
