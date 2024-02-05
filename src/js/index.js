@@ -31,7 +31,7 @@ addEventListener("DOMContentLoaded", function (event) {
         for (var i = 0; i < spans.length; i++) {
             if (spans[i].parentElement.getBoundingClientRect().top < window.innerHeight / 2) {
                 let { left, top } = spans[i].getBoundingClientRect();
-                top = top - (window.innerHeight * .2);
+                top = top - (window.innerHeight * .4);
                 let opacityValue = 1 - ((top * .01) + (left * 0.001)) < 0.1 ? 0.1 : 1 - ((top * .01) + (left * 0.001)).toFixed(3);
                 if (opacityValue < 1) {
                     opacityValue = 0.4;
