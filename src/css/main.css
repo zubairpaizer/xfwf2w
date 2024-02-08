@@ -64,6 +64,7 @@ body {
 
 .menu-coingecko .icon {
   display: none;
+  transition: all 0.2s ease-in;
 }
 
 .menu-coingecko {
@@ -72,6 +73,7 @@ body {
   justify-content: space-between;
   gap: 10px;
   background-color: var(--brown);
+  transition: all 0.2s ease-in;
 }
 
 .menu-coingecko:hover {
@@ -191,6 +193,10 @@ body {
   border-radius: 24px;
 }
 
+.note-card {
+  transition: all 0.2s ease-in;
+}
+
 .note-card:hover {
   color: var(--yellow2);
   background-color: var(--brown);
@@ -287,6 +293,7 @@ body {
   gap: 8px;
   width: 100%;
   font-size: 14px;
+  transition: all 0.2s ease-in;
 }
 
 
